@@ -1,0 +1,81 @@
+body{
+  background:black;
+  color:white;
+  font-family:Verdana;
+  margin:0;
+  background-image:url("https://i.imgur.com/8B1QFQG.gif");
+}
+
+.container{
+  display:flex;
+}
+
+.sidebar{
+  width:220px;
+  height:100vh;
+  background:#111;
+  border-right:2px solid hotpink;
+  padding:20px;
+  position:fixed;
+}
+
+.logo{
+  color:hotpink;
+  text-shadow:0 0 10px hotpink;
+  font-size:32px;
+}
+
+.sidebar a{
+  display:block;
+  color:white;
+  text-decoration:none;
+  margin-top:20px;
+  padding:10px;
+  border:1px solid hotpink;
+  transition:0.3s;
+}
+
+.sidebar a:hover{
+  background:hotpink;
+  color:black;
+  box-shadow:0 0 15px hotpink;
+}
+
+.status{
+  margin-top:40px;
+  padding:10px;
+  background:#1b1b1b;
+  border:1px dashed cyan;
+  color:cyan;
+}
+
+.content{
+  margin-left:280px;
+  padding:40px;
+  width:100%;
+}
+
+.banner{
+  background:linear-gradient(to right, hotpink, purple);
+  padding:30px;
+  border:2px solid white;
+  box-shadow:0 0 20px hotpink;
+}
+
+.box{
+  margin-top:30px;
+  background:#111;
+  padding:20px;
+  border:1px solid #444;
+  box-shadow:0 0 10px #000;
+}
+
+.box h3{
+  color:cyan;
+}
+
+.quote{
+  font-style:italic;
+  color:hotpink;
+  font-size:20px;
+}
