@@ -1,80 +1,133 @@
-body{
-  background:black;
-  color:white;
-  font-family:Verdana;
-  margin:0;
+/* Import moderního fontu Poppins z Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+
+/* --- ZÁKLADNÍ NASTAVENÍ --- */
+body {
+  background-color: #0d0d12; /* Temně šedo-modrá, šetrnější na oči než čistá černá */
+  color: #e0e0e0;
+  font-family: 'Poppins', Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.container{
-  display:flex;
+.container {
+  display: flex;
 }
 
-.sidebar{
-  width:220px;
-  height:100vh;
-  background:#111;
-  border-right:2px solid hotpink;
-  padding:20px;
-  position:fixed;
+/* --- SIDEBAR (Levé menu) --- */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #121218;
+  border-right: 1px solid #2a2a35;
+  padding: 30px;
+  position: fixed; /* Menu zůstane na místě při scrollování */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; /* Umožní nám posunout status bar úplně dolů */
 }
 
-.logo{
-  color:hotpink;
-  text-shadow:0 0 10px hotpink;
-  font-size:32px;
+.logo {
+  color: #c084fc; /* Jemná neonová fialová */
+  text-shadow: 0 0 15px rgba(192, 132, 252, 0.4); /* Lehký glow efekt */
+  font-size: 26px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 0;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
-.sidebar a{
-  display:block;
-  color:white;
-  text-decoration:none;
-  margin-top:20px;
-  padding:10px;
-  border:1px solid hotpink;
-  transition:0.3s;
+.sidebar a {
+  display: block;
+  color: #8b8b9f;
+  text-decoration: none;
+  margin-bottom: 10px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease; /* Plynulá animace */
+  font-weight: 400;
 }
 
-.sidebar a:hover{
-  background:hotpink;
-  color:black;
-  box-shadow:0 0 15px hotpink;
+.sidebar a:hover {
+  background-color: rgba(192, 132, 252, 0.1);
+  color: #c084fc;
+  transform: translateX(5px); /* Tlačítko lehce uskočí doprava */
 }
 
-.status{
-  margin-top:40px;
-  padding:10px;
-  background:#1b1b1b;
-  border:1px dashed cyan;
-  color:cyan;
+.status {
+  margin-top: auto; /* Automaticky natlačí status box na úplné dno sidebaru */
+  padding: 15px;
+  background-color: rgba(45, 212, 191, 0.1);
+  border: 1px dashed rgba(45, 212, 191, 0.3);
+  color: #2dd4bf; /* Jemná teal/tyrkysová barva */
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 300;
 }
 
-.content{
-  margin-left:280px;
-  padding:40px;
-  width:100%;
+/* --- HLAVNÍ OBSAH (Pravá část) --- */
+.content {
+  margin-left: 250px; /* Musí být stejné jako šířka sidebaru, aby se text nepřekrýval */
+  padding: 50px;
+  width: calc(100% - 250px);
+  box-sizing: border-box;
 }
 
-.banner{
-  background:linear-gradient(to right, hotpink, purple);
-  padding:30px;
-  border:2px solid white;
-  box-shadow:0 0 20px hotpink;
+.banner {
+  background: linear-gradient(135deg, #4c1d95, #0f766e); /* Přechod z temně fialové do temně tyrkysové */
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  margin-bottom: 40px;
 }
 
-.box{
-  margin-top:30px;
-  background:#111;
-  padding:20px;
-  border:1px solid #444;
-  box-shadow:0 0 10px #000;
+.banner h2 {
+  margin: 0;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 32px;
+  letter-spacing: 1px;
 }
 
-.box h3{
-  color:cyan;
+/* --- KARTY S TEXTEM --- */
+.box {
+  background-color: #16161e;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #2a2a35;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
 }
 
-.quote{
-  font-style:italic;
-  color:hotpink;
-  font-size:20px;
+.box h3 {
+  color: #2dd4bf;
+  font-weight: 600;
+  margin-top: 0;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #2a2a35;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.box p {
+  line-height: 1.7; /* Lepší čitelnost pro delší odstavce */
+  color: #a1a1aa;
+}
+
+/* --- CITÁTY A ÚRYVKY --- */
+.quote {
+  font-style: italic;
+  color: #c084fc;
+  font-size: 19px;
+  border-left: 4px solid #c084fc;
+  margin: 20px 0;
+  background: rgba(192, 132, 252, 0.05); /* Velmi jemné fialové podbarvení textu */
+  padding: 20px;
+  border-radius: 0 8px 8px 0;
+  line-height: 1.6;
 }
